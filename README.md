@@ -4,50 +4,25 @@ A tool for desensitizing information
 
 ## How does it work
 ```
-     +--------------------------+
-     |                          |
-     |                          |
-     |                          |
-     |                          |
-     |       Origin Words       |
-     |                          |
-     |                          |
-     |                          |
-     |                          |
-     +--------------------------+
+                      node-desensitize
 
-                  +
-                  |
-                  |
-                  v
-
-     +--------------------------+
-     |                          |
-     |                          |
-     |                          |
-     |                          |
-     |     Transform Rules      |      node-desensitize
-     |                          |
-     |                          |
-     |                          |
-     |                          |
-     +--------------------------+
-
-                  +
-                  |
-                  |
-                  v
-
-     +--------------------------+
-     |                          |
-     |                          |
-     |                          |
-     |                          |
-     |    Desensitized Words    |
-     |                          |
-     |                          |
-     |                          |
-     |                          |
-     +--------------------------+
++--------------+      +--------------+      +--------------+
+|              |      |              |      |              |
+|    Origin    |      |   Transform  |      | Desensitized |
+|              | +--> |              | +--> |              |
+|    Words     |      |    Rules     |      |    Words     |
+|              |      |              |      |              |
++--------------+      +--------------+      +--------------+
 
 ```
+
+## Methods
+
+* chineseName(fullName)
+* idCardNum(id)
+* fixedPhone(phone)
+* mobilePhone(phone)
+* address(address, sensitiveSize)
+* email(email)
+* bankCard(carNumber)
+* password(pwd)
